@@ -22,7 +22,7 @@ class PantallaPrincipal extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Aplicación Móvil - Ejercicios Prácticos',
+                      'Aplicación Móvil - Prueba Práctica 1',
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -40,11 +40,39 @@ class PantallaPrincipal extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            // Los botones de cada ejercicio se agregarán aquí cuando se especifiquen los ejercicios.
-            const Center(
-              child: Text(
-                'Esperando definición de ejercicios...',
-                style: TextStyle(fontStyle: FontStyle.italic, color: Colors.grey),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, '/ejercicio4');
+              },
+              icon: const Icon(Icons.star),
+              label: const Text('Ejercicio 4: Números Perfectos'),
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                alignment: Alignment.centerLeft,
+              ),
+            ),
+            const SizedBox(height: 12),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, '/ejercicio5');
+              },
+              icon: const Icon(Icons.timeline),
+              label: const Text('Ejercicio 5: Serie de Fibonacci'),
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                alignment: Alignment.centerLeft,
+              ),
+            ),
+            const SizedBox(height: 12),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, '/ejercicio6');
+              },
+              icon: const Icon(Icons.calculate),
+              label: const Text('Ejercicio 6: Número Armstrong'),
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                alignment: Alignment.centerLeft,
               ),
             ),
           ],
